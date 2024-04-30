@@ -22,22 +22,22 @@
                     </ul>
                 </div>
                 <div class="new-form-todo closed">
-                    <textarea name="new-todo-title" id="new-todo-title" maxlength="40" placeholder="Title: Pay Bills" required></textarea>
-                    <textarea name="new-todo-object" id="new-todo-object" maxlength="400" placeholder="Details: Pay Netflix, Phone, Rent etc..." required></textarea>
+                    <textarea name="new-todo-title" id="new-todo-title" minlength="1" maxlength="40" placeholder="Title: Pay Bills" ></textarea>
+                    <textarea name="new-todo-object" id="new-todo-object" minlength="1" maxlength="400" placeholder="Details: Pay Netflix, Phone, Rent etc..." ></textarea>
                     <div class="new-todo-date-container">
                         <div class="new-todo-date-title">Due Date:</div>
-                        <input type="date" name="new-todo-date" id="new-todo-input">
+                        <input type="date" name="new-todo-date" id="new-todo-date">
                     </div>
-                    <input type="submit" class="new-todo-submit" id="new-todo-submit" value="Add To Do"/>
+                    <button type="submit" class="new-todo-submit" id="new-todo-submit">Add To Do</button>
                 </div>
                 <div class="new-form-project closed">
-                    <textarea name="new-project-title" id="new-project-title" maxlength="40" placeholder="Title: House Renovation" required></textarea>
-                    <input type="submit" class="new-project-submit" id="new-project-submit" value="Create Project"/>
+                    <textarea name="new-project-title" id="new-project-title" maxlength="40" placeholder="Title: House Renovation" ></textarea>
+                    <button type="submit" class="new-project-submit" id="new-project-submit">Create Project</button>
                 </div>
                 <div class="new-form-note closed">
-                    <textarea name="new-note-title" id="new-note-title" maxlength="40" placeholder="Title:" required></textarea>
-                    <textarea name="new-note-object" id="new-note-object" maxlength="400" placeholder="Details:" required></textarea>
-                    <input type="submit" class="new-note-submit" id="new-note-submit" value="Create Note"/>
+                    <textarea name="new-note-title" id="new-note-title" maxlength="40" placeholder="Title:" ></textarea>
+                    <textarea name="new-note-object" id="new-note-object" maxlength="400" placeholder="Details:" ></textarea>
+                    <button type="submit" class="new-note-submit" id="new-note-submit">Create Note</button>
                 </div>
             </div>
         </form>
@@ -83,7 +83,9 @@
                 </ul>
                 <div class="new-todo">+</div>
             </div>
-            <div class="todos"></div>
+            <div class="global-container">
+
+            </div>
         </main>
     </div>
 </body>
