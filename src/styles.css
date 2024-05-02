@@ -47,10 +47,16 @@ header {
 main {
     flex-grow: 1;
     display: flex;
+    overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar {
-    min-width: 20%;
+    min-width: 150px;
+    width: 20%;
     background-color: rgba(86, 101, 115, 0.1);
     display: flex;
     flex-direction: column;
@@ -70,6 +76,12 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+span {
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .new-todo {
@@ -219,6 +231,86 @@ input:focus {
     padding: 4px;
     color: blanchedalmond;
     background-color: rgba(86, 101, 115, 0.5);
+}
+
+.global-container {
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.global-container::-webkit-scrollbar {
+    display: none;
+}
+
+.todos-container,
+.project-container,
+.note-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todos-container div,
+.project-container div,
+.note-container div {
+    display: flex;
+    color: blanchedalmond;
+    outline: 1px solid blanchedalmond;
+    border-radius: 5px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    text-overflow: clip;
+    padding: 5px;
+}
+
+.todos-container .button-container,
+.project-container .button-container,
+.note-container .button-container {
+    outline: none;
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox {
+    outline: 1px solid blanchedalmond;
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+.delete-button {
+    outline: 1px solid blanchedalmond;
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+.todos-container .done,
+.project-container .done,
+.note-container .done {
+    display: flex;
+    color: blanchedalmond;
+    outline: 1px solid blanchedalmond;
+    border-radius: 5px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    text-overflow: clip;
+    padding: 5px;
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 ::placeholder {
